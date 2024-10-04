@@ -7,10 +7,10 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "ผลงานด้านการแข่งขัน",
-    "ผลงานด้านการทำงาน",
-    "ประวัติการฝึกงาน",
-    "ประวัติการศึกษา",
+    {name : "ผลงานด้านการแข่งขัน" , href : "competition"},
+    {name : "ผลงานด้านการทำงาน" , href : "experience"},
+    {name : "ประวัติการฝึกงาน" , href : "experience"},
+    {name : "ประวัติการศึกษา" , href : "experience"},
   ];
 
   return (
@@ -56,10 +56,10 @@ export default function App() {
                 index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
               className="w-full"
-              href={`#${item}`}
+              href={`#${item.href}`}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
