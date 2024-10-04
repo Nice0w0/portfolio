@@ -117,7 +117,7 @@ export default function Home() {
                   showAnchorIcon
                   className="text-yellow-500 font-bold text-3xl mb-2"
                 >
-                  เว็ปไซส์ Dek-N
+                  เว็บไซต์ Dek-N
                 </Link>
                 <p className="text-gray-400">
                   เป็นโปรเจคที่ 3 ที่พัฒนาบน Framework Laravel
@@ -165,7 +165,7 @@ export default function Home() {
                   showAnchorIcon
                   className="text-yellow-500 font-bold text-3xl mb-2"
                 >
-                  เว็ปไซส์ Pongsuphan
+                  เว็บไซต์ Pongsuphan
                 </Link>
                 <p className="text-gray-400">
                   ได้ร่วมพัฒนาทำหน้าที่เป็นส่วนของ Tester ของโปรเจคนี้
@@ -188,7 +188,7 @@ export default function Home() {
                   showAnchorIcon
                   className="text-yellow-500 font-bold text-3xl mb-2"
                 >
-                  เว็ปไซส์ Jongphra
+                  เว็บไซต์ Jongphra
                 </Link>
                 <p className="text-gray-400">
                   เป็นโปรเจคที่พัฒนาบน Laravel เป็นโปรเจคที่ได้ทำระบบจ่ายเงิน ทำ
@@ -236,7 +236,7 @@ export default function Home() {
                   showAnchorIcon
                   className="text-yellow-500 font-bold text-3xl mb-2"
                 >
-                  เว็ปไซส์ acicertified
+                  เว็บไซต์ acicertified
                 </Link>
                 <p className="text-gray-400">
                   เคยทำหน้าเป็น Tester ในโปรเจคนี้
@@ -251,8 +251,12 @@ export default function Home() {
       {/* Modal */}
       {selectedImage && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img src={selectedImage.src} alt={selectedImage.alt} />
+          <div className="modal-content rotate-90 md:rotate-0" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="max-w-full max-h-full"
+            />
           </div>
         </div>
       )}
