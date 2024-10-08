@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Image } from "@nextui-org/react";
 import Navbar from "./navbar.js";
 import { Link } from "@nextui-org/link";
+import { About } from "./about.js";
+
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -20,6 +22,7 @@ export default function Home() {
       <Navbar />
       <div className="w-full mx-auto px-5 md:px-20 mb-20">
         {/* Competition Section */}
+        <About />
         <section id="competition" className="text-center my-12">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white">
             ผลงานด้านการแข่งขัน
@@ -251,7 +254,7 @@ export default function Home() {
       {/* Modal */}
       {selectedImage && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content rotate-90 md:rotate-0" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img
               src={selectedImage.src}
               alt={selectedImage.alt}
