@@ -22,7 +22,7 @@ export default function Home() {
       <Navbar />
       <div className="w-full mx-auto px-5 md:px-20 mb-20">
         {/* Competition Section */}
-        <About />
+        {/* <About /> */}
         <section id="competition" className="text-center my-12">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white">
             ผลงานด้านการแข่งขัน
